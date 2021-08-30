@@ -211,7 +211,7 @@ func resolveExpr(ctx *adt.OpContext, v Value, x ast.Expr) adt.Value {
 // anonymousPkg reports a package path that can never resolve to a valid package.
 const anonymousPkg = "_"
 
-// CompileString parses and build a Value from the given source string.
+// CompileString parses and builds a Value from the given source string.
 //
 // The returned Value will represent an error, accessible through Err, if any
 // error occurred.
@@ -220,7 +220,7 @@ func (c *Context) CompileString(src string, options ...BuildOption) Value {
 	return c.compile(c.runtime().Compile(&cfg, src))
 }
 
-// ParseString parses and build a Value from the given source bytes.
+// CompileBytes parses and builds a Value from the given source bytes.
 //
 // The returned Value will represent an error, accessible through Err, if any
 // error occurred.
