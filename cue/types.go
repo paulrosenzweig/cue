@@ -1098,7 +1098,7 @@ func (v Value) Source() ast.Node {
 	return v.v.Value().Source()
 }
 
-// Err returns the error represented by v or nil v is not an error.
+// Err returns the error represented by v or nil if v is not an error.
 func (v Value) Err() error {
 	if err := v.checkKind(v.ctx(), adt.BottomKind); err != nil {
 		return v.toErr(err)
